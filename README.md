@@ -85,7 +85,7 @@ http://127.0.0.1:5000/
 
 ## UI Demo
 
-![Movie Genre Classifier Demo](static/demo.gif)
+![Movie Genre Classifier Demo](static/predictvd.gif)
 
 ## Possible Improvements
 
