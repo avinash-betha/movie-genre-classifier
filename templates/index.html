@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🎬 Movie Genre Classifier</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f4f8;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 40px;
+      }
+      h2 {
+        color: #333;
+      }
+      textarea {
+        width: 500px;
+        height: 150px;
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        resize: none;
+      }
+      input[type="submit"] {
+        margin-top: 20px;
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+      input[type="submit"]:hover {
+        background-color: #0056b3;
+      }
+      .result {
+        margin-top: 30px;
+        padding: 20px;
+        background-color: #fff;
+        border-left: 6px solid #007bff;
+        border-radius: 6px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+        font-size: 18px;
+        width: 520px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>🎬 Movie Genre Classifier</h2>
+    <form action="/predict" method="post">
+      <textarea name="plot" placeholder="Enter movie plot here..."></textarea
+      ><br />
+      <input type="submit" value="Predict" />
+    </form>
+
+    {% if prediction_text %}
+    <div class="result">{{ prediction_text|safe }}</div>
+    {% endif %}
+  </body>
+</html>
